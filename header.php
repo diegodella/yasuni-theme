@@ -70,31 +70,43 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
-			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
-
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text"><?php _e( 'Main menu', 'yasuni' ); ?></h3>
+				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'yasuni' ); ?>"><?php _e( 'Skip to primary content', 'yasuni' ); ?></a></div>
+				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'yasuni' ); ?>"><?php _e( 'Skip to secondary content', 'yasuni' ); ?></a></div>
+				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav><!-- #access -->
+			<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></h1>
 			<?php
 				// Check to see if the header image has been removed
 				$header_image = get_header_image();
 				if ( ! empty( $header_image ) ) :
 			?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-				<?php
-					// The header image
-					// Check if this is a post or page, if it has a thumbnail, and if it's a big one
-					if ( is_singular() &&
-							has_post_thumbnail( $post->ID ) &&
-							( /* $src, $width, $height */ $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
-							$image[1] >= HEADER_IMAGE_WIDTH ) :
-						// Houston, we have a new header image!
-						echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-					else : ?>
-					<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
-				<?php endif; // end check for featured image or standard header ?>
-			</a>
-			<?php endif; // end check for removed header image ?>
+			<div id="paralax">
+                <div id="header_image">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
+                    <?php
+                    // The header image
+                    // Check if this is a post or page, if it has a thumbnail, and if it's a big one
+                    if ( is_singular() &&
+                            has_post_thumbnail( $post->ID ) &&
+                            ( $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), array( HEADER_IMAGE_WIDTH, HEADER_IMAGE_WIDTH ) ) ) &&
+                            $image[1] >= HEADER_IMAGE_WIDTH ) :
+                        // Houston, we have a new header image!
+                        echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+                    else : ?>
+                        <img src="<?php header_image(); ?>" />
+                    <?php endif; // end check for featured image or standard header ?>
+                    </span></a>
+                </div>
+                <img id="asset_tree"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
+                <img id="asset_tree_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
+                <img id="swash" src="<?php echo get_template_directory_uri(); ?>/images/swash.png" />
+                <img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
+                <img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />            </div>
+            <?php endif; // end check for removed header image ?>
 
 			<?php
 				// Has the text been hidden?
@@ -109,14 +121,7 @@
 				<?php get_search_form(); ?>
 			<?php endif; ?>
 
-			<nav id="access" role="navigation">
-				<h3 class="assistive-text"><?php _e( 'Main menu', 'yasuni' ); ?></h3>
-				<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'yasuni' ); ?>"><?php _e( 'Skip to primary content', 'yasuni' ); ?></a></div>
-				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'yasuni' ); ?>"><?php _e( 'Skip to secondary content', 'yasuni' ); ?></a></div>
-				<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access -->
+
 	</header><!-- #branding -->
 
 
