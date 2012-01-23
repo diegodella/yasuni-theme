@@ -143,53 +143,29 @@ function yasuni_setup() {
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
 		'wheel' => array(
-			'url' => '%s/images/headers/wheel.jpg',
-			'thumbnail_url' => '%s/images/headers/wheel-thumbnail.jpg',
+			'url' => '%s/images/headers/yasuni1.jpg',
+			'thumbnail_url' => '%s/images/headers/yasuni-thub.jpg',
 			/* translators: header image description */
-			'description' => __( 'Wheel', 'yasuni' )
+			'description' => __( 'Tiburon ballena', 'yasuni' )
 		),
-		'shore' => array(
-			'url' => '%s/images/headers/shore.jpg',
-			'thumbnail_url' => '%s/images/headers/shore-thumbnail.jpg',
+		'wheel' => array(
+			'url' => '%s/images/headers/yasuni2.jpg',
+			'thumbnail_url' => '%s/images/headers/yasuni2-thumb.jpg',
 			/* translators: header image description */
-			'description' => __( 'Shore', 'yasuni' )
+			'description' => __( 'Multitud', 'yasuni' )
 		),
-		'trolley' => array(
-			'url' => '%s/images/headers/trolley.jpg',
-			'thumbnail_url' => '%s/images/headers/trolley-thumbnail.jpg',
+		'wheel' => array(
+			'url' => '%s/images/headers/yasuni3.jpg',
+			'thumbnail_url' => '%s/images/headers/yasuni3-thumb.jpg',
 			/* translators: header image description */
-			'description' => __( 'Trolley', 'yasuni' )
+			'description' => __( 'Escalada', 'yasuni' )
 		),
-		'pine-cone' => array(
-			'url' => '%s/images/headers/pine-cone.jpg',
-			'thumbnail_url' => '%s/images/headers/pine-cone-thumbnail.jpg',
+		'wheel' => array(
+			'url' => '%s/images/headers/yasuni4.jpg',
+			'thumbnail_url' => '%s/images/headers/yasuni4-thumb.jpg',
 			/* translators: header image description */
-			'description' => __( 'Pine Cone', 'yasuni' )
+			'description' => __( 'Guarani', 'yasuni' )
 		),
-		'chessboard' => array(
-			'url' => '%s/images/headers/chessboard.jpg',
-			'thumbnail_url' => '%s/images/headers/chessboard-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Chessboard', 'yasuni' )
-		),
-		'lanterns' => array(
-			'url' => '%s/images/headers/lanterns.jpg',
-			'thumbnail_url' => '%s/images/headers/lanterns-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Lanterns', 'yasuni' )
-		),
-		'willow' => array(
-			'url' => '%s/images/headers/willow.jpg',
-			'thumbnail_url' => '%s/images/headers/willow-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Willow', 'yasuni' )
-		),
-		'hanoi' => array(
-			'url' => '%s/images/headers/hanoi.jpg',
-			'thumbnail_url' => '%s/images/headers/hanoi-thumbnail.jpg',
-			/* translators: header image description */
-			'description' => __( 'Hanoi Plant', 'yasuni' )
-		)
 	) );
 }
 endif; // yasuni_setup
