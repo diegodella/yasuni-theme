@@ -142,25 +142,25 @@ function yasuni_setup() {
 
 	// Default custom headers packaged with the theme. %s is a placeholder for the theme template directory URI.
 	register_default_headers( array(
-		'wheel' => array(
+		'tiburon' => array(
 			'url' => '%s/images/headers/yasuni1.jpg',
-			'thumbnail_url' => '%s/images/headers/yasuni-thub.jpg',
+			'thumbnail_url' => '%s/images/headers/yasuni1-thumb.jpg',
 			/* translators: header image description */
 			'description' => __( 'Tiburon ballena', 'yasuni' )
 		),
-		'wheel' => array(
+		'multitud' => array(
 			'url' => '%s/images/headers/yasuni2.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni2-thumb.jpg',
 			/* translators: header image description */
 			'description' => __( 'Multitud', 'yasuni' )
 		),
-		'wheel' => array(
+		'escalada' => array(
 			'url' => '%s/images/headers/yasuni3.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni3-thumb.jpg',
 			/* translators: header image description */
 			'description' => __( 'Escalada', 'yasuni' )
 		),
-		'wheel' => array(
+		'guarani' => array(
 			'url' => '%s/images/headers/yasuni4.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni4-thumb.jpg',
 			/* translators: header image description */
@@ -509,6 +509,30 @@ function yasuni_comment( $comment, $args, $depth ) {
 					<?php edit_comment_link( __( 'Edit', 'yasuni' ), '<span class="edit-link">', '</span>' ); ?>
 				</div><!-- .comment-author .vcard -->
 
+				<?php if ( $comment->comment_approved == '0' ) : ?>
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'yasuni' ); ?></em>
+					<br />
+				<?php endif; ?>
+
+			</footer>
+
+			<div class="comment-content"><?php comment_text(); ?></div>
+
+			<div class="reply">
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'yasuni' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+			</div><!-- .reply -->
+		</article><!-- #comment-## -->
+
+	<?php
+			break;
+	endswitch;
+}
+endif; // ends check for yasuni_comment()
+
+if ( ! function_exists( 'yasuni_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ * Create your own yasuni_posted_on to override in a child theme
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'yasuni' ); ?></em>
 					<br />

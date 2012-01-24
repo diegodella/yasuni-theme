@@ -84,7 +84,7 @@
 				$header_image = get_header_image();
 				if ( ! empty( $header_image ) ) :
 			?>
-			<div id="paralax">
+			<div id="parallax">
                 <div id="header_image">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
                     <?php
@@ -101,11 +101,15 @@
                     <?php endif; // end check for featured image or standard header ?>
                     </span></a>
                 </div>
+                <img id="swash" src="<?php echo get_template_directory_uri(); ?>/images/swash.png" />
                 <img id="asset_tree"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
                 <img id="asset_tree_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
-                <img id="swash" src="<?php echo get_template_directory_uri(); ?>/images/swash.png" />
                 <img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
-                <img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />            </div>
+                <img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />            
+                <img id="swash1" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
+                <img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
+
+            </div>
             <?php endif; // end check for removed header image ?>
 
 			<?php
