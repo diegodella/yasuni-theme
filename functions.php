@@ -109,8 +109,12 @@ function yasuni_setup() {
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
 	add_theme_support( 'post-thumbnails' );
 
+	// WPML Constants
+	define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+	define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+	
 	// The next four constants set how Yasuni supports custom headers.
-
+    
 	// The default header text color
 	define( 'HEADER_TEXTCOLOR', '000' );
 
@@ -355,6 +359,14 @@ function yasuni_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 
+	register_sidebar( array(
+		'name' => __( 'Header Slot', 'yasuni' ),
+		'id' => 'sidebar-6',
+		'description' => __( 'The sidebar for the social badges', 'yasuni' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Showcase Sidebar', 'yasuni' ),
 		'id' => 'sidebar-2',
