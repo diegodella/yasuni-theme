@@ -21,11 +21,7 @@
 				if ( ! is_404() )
 					get_sidebar( 'footer' );
 			?>
-
-			<div id="site-generator">
-				<?php do_action( 'yasuni_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'yasuni' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'yasuni' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'yasuni' ), 'WordPress' ); ?></a>
-			</div>
+    <br class="clear" />
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
