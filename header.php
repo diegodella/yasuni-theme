@@ -118,7 +118,8 @@
 				<img id="asset_tree_b"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
 				<img id="asset_tree_2" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
 				<img id="asset_bird_2" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />
-				<img id="swash2" src="<?php echo get_template_directory_uri(); ?>/images/swash_2.png" />
+				<img id="swash2" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
+				<img id="asset_bird_blue" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_blue.png" />
 			<?php } ?>
         </div>
         <?php endif; // end check for removed header image ?>
@@ -127,3 +128,4 @@
 
 
 	<div id="main<?php if ( is_front_page() ) { echo "-home"; } ?>">
+		<?php if ( ! is_front_page() ) {?><div id="menu_list"></div><?php } ?>

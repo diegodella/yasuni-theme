@@ -197,6 +197,11 @@ h1 {
     width: 106px;
     height: 76px;
 }
+#menu_list {
+    background: none repeat scroll 0 0 #5D83B3;
+    width: 200px;
+    height: 158px;
+}
 #slogan {
     top:200px;
     left:170px;
