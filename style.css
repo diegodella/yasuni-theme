@@ -107,10 +107,17 @@ h1 {
     position:relative;
 
 }
-#main {
+#main-home {
     background: #FFF;
     padding: 50px 15px 15px;
     overflow: hidden;
+}
+#main {
+	background: #FFF;
+	margin: -90px 0px;
+    padding: 150px 15px 15px;
+    overflow: hidden;
+    
 }
 #site-title {
     background:url(images/logo.png) no-repeat;
@@ -155,6 +162,10 @@ h1 {
     bottom: -52px;
     left:0;
 }
+#swash2 {
+    bottom: 70px;
+    left: 0;
+}
 #asset_bird {
     top: 311px;
     right: -36px;
@@ -163,13 +174,28 @@ h1 {
     top: 138px;
     left: 485px;
 }
-#asset_tree {
+#asset_bird_2 {
+    left: 585px;
+    top: 55px;
+}
+#asset_tree_a {
     bottom: 10px;
     left: 496px;
+}
+#asset_tree_b {
+    bottom: 10px;
+    left: 496px;
+    top: 180px;
 }
 #asset_tree_1 {
     top: 181px;
     left: 18px;
+}
+#asset_tree_2 {
+    left: 18px;
+    top: 111px;
+    width: 106px;
+    height: 76px;
 }
 #slogan {
     top:200px;
