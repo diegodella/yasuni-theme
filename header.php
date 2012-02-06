@@ -90,7 +90,7 @@
 	    <?php endif; ?>
 
 		<div id="parallax">
-            <div id="header_image">
+            <div id="header_image" class = "<?php if (is_front_page()) echo "home"; ?>">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
                 <?php
                 // The header image
