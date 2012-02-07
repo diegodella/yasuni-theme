@@ -107,7 +107,7 @@ function yasuni_setup() {
 	add_custom_background();
 
 	// This theme uses Featured Images (also known as post thumbnails) for per-post/per-page Custom Header images
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'post-thumbnails', array('post','page') );
 
 	// WPML Constants
 	define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
@@ -134,6 +134,7 @@ function yasuni_setup() {
 	// Add Yasuni's custom image sizes
 	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
 	add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
+	add_image_size( 'small', 350, 350 );
 
 	// Turn on random header image rotation by default.
 	add_theme_support( 'custom-header', array( 'random-default' => true ) );

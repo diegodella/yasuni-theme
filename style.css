@@ -374,3 +374,66 @@ h1 {
 #menu-item-11 a {
     background:url(images/logo_youtube.png) no-repeat;
 }
+/*tours*/
+
+#tours {
+    height: 300px;
+}
+#tours li {
+    float:left;
+    width: 32px;
+    margin:0 7px;
+}
+#tours h2 {
+    font-family: "OblikBold", "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    background: #900;
+    height:150px;
+    text-indent:-115px;
+}
+#tours h2 a {
+    display:block;
+    color:#FFF;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+#tours h2 span {
+    display:none;
+    border: 6px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    margin: 15px -7px -75px;
+}
+#tours li p {
+    display: none;
+}
+#tours li:hover {
+    width: auto;
+}
+#tours li:hover span {
+    display:block;
+}
+#tours li:hover h2 {
+    padding:2em 5px;
+    height: auto;
+}
+#tours li:hover a {
+    display:block;
+    text-indent:0;
+    margin-top:20px;
+    -webkit-transition: transform;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    
+}
+#tours a:hover {
+    text-shadow: none;
+}
+#content {
+    clear: both;
+}

@@ -15,6 +15,28 @@
 get_header(); ?>
 
 		<div id="primary">
+            <nav id="tours">
+            <ul>
+            <?php
+                $pages = query_posts(array(
+                    'post_type'=>'page', 
+                    'post_parent'=>24,
+                ));
+                while (have_posts()): the_post();
+            ?>
+                <li>
+                    <h2>
+                        <a href="<?php echo get_page_link($pagg->ID); ?>"><?php the_title(); ?></a>
+                        <span><?php the_post_thumbnail('small'); ?></span>
+                    </h2>
+                    <?php the_excerpt(); ?>
+                </li>
+            <?php
+                endwhile;
+                wp_reset_query();
+            ?>
+            </ul>
+            </nav>
 			<div id="content" role="main">
 
 			<?php if ( have_posts() ) : ?>
