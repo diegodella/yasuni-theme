@@ -150,6 +150,10 @@ h1 {
     position:relative;
     height: 400px;
     margin: 3px 0;
+    z-index:999;
+}
+#parallax.inner {
+    height: 340px;
 }
 #parallax>img {
     position: absolute;
@@ -163,8 +167,9 @@ h1 {
     left:0;
 }
 #swash2 {
-    bottom: 70px;
+    bottom: 0px;
     left: 0;
+    z-index:-1;
 }
 #asset_bird {
     top: 311px;
@@ -174,7 +179,7 @@ h1 {
     top: 138px;
     left: 485px;
 }
-#asset_bird_2 {
+.inner #asset_bird_2 {
     left: 585px;
     top: 55px;
 }
@@ -182,8 +187,7 @@ h1 {
     bottom: 10px;
     left: 496px;
 }
-#asset_tree_b {
-    bottom: 10px;
+.inner #asset_tree_a {
     left: 496px;
     top: 180px;
 }
@@ -191,7 +195,7 @@ h1 {
     top: 181px;
     left: 18px;
 }
-#asset_tree_2 {
+.inner #asset_tree_1 {
     left: 18px;
     top: 111px;
     width: 106px;
