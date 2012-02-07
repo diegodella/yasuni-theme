@@ -107,10 +107,17 @@ h1 {
     position:relative;
 
 }
-#main {
+#main-home {
     background: #FFF;
     padding: 50px 15px 15px;
     overflow: hidden;
+}
+#main {
+	background: #FFF;
+	margin: -90px 0px;
+    padding: 150px 15px 15px;
+    overflow: hidden;
+    
 }
 #site-title {
     background:url(images/logo.png) no-repeat;
@@ -155,6 +162,10 @@ h1 {
     bottom: -52px;
     left:0;
 }
+#swash2 {
+    bottom: 70px;
+    left: 0;
+}
 #asset_bird {
     top: 311px;
     right: -36px;
@@ -163,19 +174,39 @@ h1 {
     top: 138px;
     left: 485px;
 }
-#asset_tree {
+#asset_bird_2 {
+    left: 585px;
+    top: 55px;
+}
+#asset_tree_a {
     bottom: 10px;
     left: 496px;
+}
+#asset_tree_b {
+    bottom: 10px;
+    left: 496px;
+    top: 180px;
 }
 #asset_tree_1 {
     top: 181px;
     left: 18px;
 }
+#asset_tree_2 {
+    left: 18px;
+    top: 111px;
+    width: 106px;
+    height: 76px;
+}
+#menu_list {
+    background: none repeat scroll 0 0 #5D83B3;
+    width: 200px;
+    height: 158px;
+}
 #slogan {
     top:200px;
     left:170px;
 }
-#header_image {
+#header_image.home {
     background: url(images/shine.png?1) no-repeat;
     text-align: right;
     padding: 37px 54px 20px 0;
@@ -184,7 +215,7 @@ h1 {
     background-position: right;
     right: 0;
 }
-#header_image a {
+#header_image.home a {
     display:block;
     border-radius:50%;
     width: 333px;
@@ -195,7 +226,7 @@ h1 {
     float:right;
     background: url(images/bg_circle.png) no-repeat;
 }
-#header_image span {
+#header_image.home span {
     display:block;
     border-radius:50%;
     width: 320px;
@@ -203,11 +234,30 @@ h1 {
     overflow:hidden;
     border:7px solid #96B617;
 }
+#header_image {
+    text-align: right;
+    padding: 67px 54px 20px 0;
+    overflow: hidden;
+        
+    background-position: right;
+    right: 0;
+}
+#header_image a {
+    display:block;
+    border-radius:50%;
+    width: 260px;
+    height: 260px;
+    overflow:hidden;
+    border: 7px solid white;
+    box-shadow: inset 0 0 6px #63a215;
+    float:right;
+    background: url(images/bg_circle.png) no-repeat;
+}
 #header_image span {
     display:block;
     border-radius:50%;
-    width: 320px;
-    height: 320px;
+    width: 247px;
+    height: 247px;
     overflow:hidden;
     border:7px solid #96B617;
 }

@@ -90,7 +90,7 @@
 	    <?php endif; ?>
 
 		<div id="parallax">
-            <div id="header_image">
+            <div id="header_image" class = "<?php if ( is_front_page() ) echo "home"; ?>">
                 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
                 <?php
                 // The header image
@@ -107,17 +107,25 @@
                 </span></a>
             </div>
             <img id="swash" src="<?php echo get_template_directory_uri(); ?>/images/swash.png" />
-            <img id="asset_tree"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
-            <img id="asset_tree_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
-            <img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
-            <img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />            
-            <img id="swash1" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
-            <img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
-
+            <?php if ( is_front_page() ) { ?>
+            	<img id="asset_tree_a"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
+            	<img id="asset_tree_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
+            	<img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
+            	<img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />
+            	<img id="swash1" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
+            	<img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
+			<?php } else { ?>
+				<img id="asset_tree_b"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
+				<img id="asset_tree_2" src="<?php echo get_template_directory_uri(); ?>/images/asset_tree_1.png" />
+				<img id="asset_bird_2" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />
+				<img id="swash2" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
+				<img id="asset_bird_blue" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_blue.png" />
+			<?php } ?>
         </div>
         <?php endif; // end check for removed header image ?>
 
 	</header><!-- #branding -->
 
 
-	<div id="main">
+	<div id="main<?php if ( is_front_page() ) { echo "-home"; } ?>">
+		<?php if ( ! is_front_page() ) {?><div id="menu_list"></div><?php } ?>
