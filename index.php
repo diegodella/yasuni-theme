@@ -25,11 +25,12 @@ get_header(); ?>
                 while (have_posts()): the_post();
             ?>
                 <li>
+                    <?php the_excerpt(); ?>
                     <h2>
                         <a href="<?php echo get_page_link($pagg->ID); ?>"><?php the_title(); ?></a>
                         <span><?php the_post_thumbnail('small'); ?></span>
                     </h2>
-                    <?php the_excerpt(); ?>
+
                 </li>
             <?php
                 endwhile;

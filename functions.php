@@ -305,7 +305,7 @@ add_filter( 'excerpt_length', 'yasuni_excerpt_length' );
  * Returns a "Continue Reading" link for excerpts
  */
 function yasuni_continue_reading_link() {
-	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'yasuni' ) . '</a>';
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Más', 'yasuni' ) . '</a>';
 }
 
 /**
