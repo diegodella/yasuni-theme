@@ -165,6 +165,8 @@ h1 {
 #swash2 {
     bottom: 70px;
     left: 0;
+    z-index: -1;
+
 }
 #asset_bird {
     top: 311px;
