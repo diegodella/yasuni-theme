@@ -120,4 +120,3 @@
 
 
 	<div id="main<?php if ( is_front_page() ) { echo "-home"; } ?>">
-		<?php if ( ! is_front_page() ) {?><div id="menu_list"></div><?php } ?>
