@@ -24,7 +24,7 @@ get_header(); ?>
                 ));
                 while (have_posts()): the_post();
             ?>
-                <li>
+                <li id="<?php echo slugify(the_title());?>">
                     <?php the_excerpt(); ?>
                     <h2>
                         <a href="<?php echo get_page_link($pagg->ID); ?>"><?php the_title(); ?></a>

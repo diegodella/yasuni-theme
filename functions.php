@@ -150,25 +150,21 @@ function yasuni_setup() {
 		'tiburon' => array(
 			'url' => '%s/images/headers/yasuni1.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni1-thumb.jpg',
-			/* translators: header image description */
 			'description' => __( 'Tiburon ballena', 'yasuni' )
 		),
 		'multitud' => array(
 			'url' => '%s/images/headers/yasuni2.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni2-thumb.jpg',
-			/* translators: header image description */
 			'description' => __( 'Multitud', 'yasuni' )
 		),
 		'escalada' => array(
 			'url' => '%s/images/headers/yasuni3.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni3-thumb.jpg',
-			/* translators: header image description */
 			'description' => __( 'Escalada', 'yasuni' )
 		),
 		'guarani' => array(
 			'url' => '%s/images/headers/yasuni4.jpg',
 			'thumbnail_url' => '%s/images/headers/yasuni4-thumb.jpg',
-			/* translators: header image description */
 			'description' => __( 'Guarani', 'yasuni' )
 		),
 	) );
@@ -213,6 +209,26 @@ function yasuni_header_style() {
 	<?php
 }
 endif; // yasuni_header_style
+function slugify($text){
+    $text = strtolower($text);
+    $text = preg_replace('~[^\\pL\d]+~u', '-', $text);
+    $text = trim($text, '-');
+    if (function_exists('iconv')){
+        $text = iconv('utf-8', 'us-ascii//TRANSLIT', $text);
+    }
+
+    $text = preg_replace('~[^-\w]+~', '', $text);
+ 
+    if (empty($text)){
+        return 'n-a';
+    }
+ 
+    return $text;
+}
+ 
+function get_category_from_page_name($name){
+    return get_category_by_slug(slugify($name));
+}
 
 if ( ! function_exists( 'yasuni_admin_header_style' ) ) :
 /**
@@ -386,6 +402,35 @@ function yasuni_widgets_init() {
 		'after_widget' => "</aside>",
 		'before_title' => '',
 		'after_title' => '',
+	) );
+	register_sidebar( array(
+		'name' => __( 'Footer Area One', 'yasuni' ),
+		'id' => 'sidebar-3',
+		'description' => __( 'An optional widget area for your site footer', 'yasuni' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer Area Two', 'yasuni' ),
+		'id' => 'sidebar-4',
+		'description' => __( 'An optional widget area for your site footer', 'yasuni' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer Area Three', 'yasuni' ),
+		'id' => 'sidebar-5',
+		'description' => __( 'An optional widget area for your site footer', 'yasuni' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => "</aside>",
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'yasuni_widgets_init' );

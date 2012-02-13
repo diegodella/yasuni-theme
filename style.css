@@ -100,7 +100,9 @@ h1 {
 
 /* =Structure
 ----------------------------------------------- */
-
+article {
+    margin-bottom: 2em;
+}
 #page {
     width: 950px;
     margin:0 auto;
@@ -451,7 +453,7 @@ h1 {
     position:relative;
 }
 #tours li:hover {
-    width: 240px;
+    width: 270px;
     cursor: pointer;
 }
 #tours li:after {
@@ -497,7 +499,6 @@ h1 {
     width:0;
     float:right;
     line-height:1em;
-    left: 100px;
     background: #DC721C;
     margin:0;
     padding: 46px 5px 5px;
@@ -517,7 +518,7 @@ h1 {
 
 #tours li:hover p {
     display:block;
-    width: 130px;
+    width: 160px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;

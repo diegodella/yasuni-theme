@@ -25,11 +25,6 @@
 			</div><!-- .entry-meta -->
 			<?php endif; ?>
 
-			<?php if ( comments_open() && ! post_password_required() ) : ?>
-			<div class="comments-link">
-				<?php comments_popup_link( '<span class="leave-reply">' . __( 'Reply', 'yasuni' ) . '</span>', _x( '1', 'comments number', 'yasuni' ), _x( '%', 'comments number', 'yasuni' ) ); ?>
-			</div>
-			<?php endif; ?>
 		</header><!-- .entry-header -->
 
 		<?php if ( is_search() ) : // Only display Excerpts for Search ?>
@@ -74,7 +69,6 @@
 			<?php if ( $show_sep ) : ?>
 			<span class="sep"> | </span>
 			<?php endif; // End if $show_sep ?>
-			<span class="comments-link"><?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a reply', 'yasuni' ) . '</span>', __( '<b>1</b> Reply', 'yasuni' ), __( '<b>%</b> Replies', 'yasuni' ) ); ?></span>
 			<?php endif; // End if comments_open() ?>
 
 			<?php edit_post_link( __( 'Edit', 'yasuni' ), '<span class="edit-link">', '</span>' ); ?>
