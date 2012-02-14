@@ -417,7 +417,9 @@ article {
     color: #999;
 }
 /* Social Icons */
-
+.menu-social-container a{
+    display:block;
+}
 #nav_menu-5 {
     position: absolute;
     top:140px;
