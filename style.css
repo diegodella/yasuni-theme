@@ -274,7 +274,7 @@ article {
     top: 0;
     right:0;
     width: 65%;
-    z-index: 99;
+    z-index: 9999;
     padding: 7px 0;
 }
 #access li {
