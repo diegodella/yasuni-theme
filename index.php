@@ -24,7 +24,7 @@ get_header(); ?>
                 ));
                 while (have_posts()): the_post();
             ?>
-                <li id="<?php echo slugify(the_title());?>">
+                <li id="<?php the_title();?>">
                     <?php the_excerpt(); ?>
                     <h2>
                         <a href="<?php echo get_page_link($pagg->ID); ?>"><?php the_title(); ?></a>
@@ -40,7 +40,9 @@ get_header(); ?>
             </nav>
 			<div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+			<?php 
+            query_posts( 'category_name=Home&showposts=1' );
+			if ( have_posts() ) : ?>
 
 				<?php yasuni_content_nav( 'nav-above' ); ?>
 
@@ -64,7 +66,10 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
 
-			<?php endif; ?>
+			<?php 
+			endif; 
+            wp_reset_query();   
+			?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->

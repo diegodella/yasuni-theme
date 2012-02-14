@@ -14,11 +14,11 @@ Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, ri
 -------------------------------------------------------------- */
 @font-face {
     font-family: 'OblikBold';
-    src: url('oblik_bold_0-webfont.eot');
-    src: url('oblik_bold_0-webfont.eot?#iefix') format('embedded-opentype'),
-         url('oblik_bold_0-webfont.woff') format('woff'),
-         url('oblik_bold_0-webfont.ttf') format('truetype'),
-         url('oblik_bold_0-webfont.svg#OblikBold') format('svg');
+    src: url('fonts/oblik_bold_0-webfont.eot');
+    src: url('fonts/oblik_bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/oblik_bold_0-webfont.woff') format('woff'),
+         url('fonts/oblik_bold_0-webfont.ttf') format('truetype'),
+         url('fonts/oblik_bold_0-webfont.svg#OblikBold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -424,7 +424,7 @@ article {
     right:5px;
     z-index:99999;
 }
-#nav_menu-5 a{
+#nav_menu-5 a{86
     display:block;
     width: 36px;
     height: 36px;
@@ -453,13 +453,12 @@ article {
     position:relative;
 }
 #tours li:hover {
-    width: 270px;
+    width: 350px;
     cursor: pointer;
 }
 #tours li:after {
     display:block;
     content:"";
-    background:url(images/asset_arrow_3.png) no-repeat;
     height:30px;
     width:30px;
     margin-top:10px;
@@ -468,21 +467,19 @@ article {
     display:none;
 }
 #tours h2 {
-    font-family: "OblikBold", "Helvetica", "Arial", sans-serif;
-    font-weight: bold;
-    background: #DC721C;
     height:150px;
     text-indent:-115px;
-    padding: 26px 0 0;
+    padding: 60px 0 0;
     border-radius:3px;
 }
 #tours h2 a {
     display:block;
     color:#FFF;
+    font: "OblikBold", "Helvetica";
+    font-weight: bold;
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-    -webkit-transition: all 0.3s;
 }
 #tours h2 span {
     display:none;
@@ -499,14 +496,10 @@ article {
     width:0;
     float:right;
     line-height:1em;
-    background: #DC721C;
     margin:0;
-    padding: 46px 5px 5px;
+    padding: 90px 5px 5px;
     color: #FFF;
     border-radius:3px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
 }
 #tours p a {
     background:#FFF;
@@ -515,14 +508,11 @@ article {
     padding:3px;
     width:2em;
 }
-
 #tours li:hover p {
     display:block;
-    width: 160px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    width:230px;
 }
+
 #tours li:hover span {
     display:block;
 }
@@ -535,17 +525,58 @@ article {
     display:block;
     text-indent:0;
     margin-top:20px;
-
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
 }
 #tours a:hover {
     text-shadow: none;
+    
 }
+
+#Adventure h2, #Adventure p {
+    background:#B4B309;
+}
+#Adventure:after {
+    background-image: url(images/asset_arrow_5.png);
+}
+#Galapagos h2, #Galapagos p {
+    background:#36A2AC;
+}
+#Galapagos:after {
+    background-image: url(images/asset_arrow_4.png);
+}
+#Coast h2, #Coast p {
+    background:#DC721C;
+}
+#Coast:after {
+    background-image: url(images/asset_arrow_3.png);
+}
+#Andes h2, #Andes p {
+    background:#5E84B3;
+}
+#Andes:after {
+    background-image: url(images/asset_arrow_2.png);
+}
+#Amazon h2, #Amazon p {
+    background:#5C8B01;
+}
+#Amazon:after {
+    background-image: url(images/asset_arrow.png);
+}
+#Photography h2, #Photography p {
+    background:#CC4E4F;
+}
+#Photography:after {
+    background-image: url(images/asset_arrow_6.png);
+}
+/**/
 #content {
     clear: both;
+}
+#secondary h3 {
+    text-align:right;
+    font: 3em 'OblikBold', 'Helvetica', 'Arial';
+    color:#63A215; 
+    text-transform: lowercase;
 }
