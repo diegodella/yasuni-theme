@@ -162,6 +162,7 @@ article {
 }
 #parallax>img {
     position: absolute;
+    z-index:6;
 }
 #swash {
     top: 29px;
@@ -216,60 +217,26 @@ article {
     top:200px;
     left:170px;
 }
-#header_image.home {
-    background: url(images/shine.png?1) no-repeat;
-    text-align: right;
-    padding: 37px 54px 20px 0;
-    overflow: hidden;
-        
-    background-position: right;
-    right: 0;
-}
-#header_image.home a {
-    display:block;
-    border-radius:50%;
-    width: 333px;
-    height: 333px;
-    overflow:hidden;
-    border: 7px solid white;
-    box-shadow: inset 0 0 6px #63a215;
-    float:right;
-    background: url(images/bg_circle.png) no-repeat;
-}
-#header_image.home span {
-    display:block;
-    border-radius:50%;
-    width: 320px;
-    height: 320px;
-    overflow:hidden;
-    border:7px solid #96B617;
-}
 #header_image {
-    text-align: right;
-    padding: 67px 54px 20px 0;
-    overflow: hidden;
-        
+    position:absolute;
     background-position: right;
     right: 0;
 }
-#header_image a {
-    display:block;
-    border-radius:50%;
-    width: 260px;
-    height: 260px;
-    overflow:hidden;
-    border: 7px solid white;
-    box-shadow: inset 0 0 6px #63a215;
-    float:right;
-    background: url(images/bg_circle.png) no-repeat;
+#header_image .header-slider-wrapper {
+	margin: 20px 30px;
+    width:380px;
+    height:380px;
+    overflow: hidden;    
 }
-#header_image span {
-    display:block;
-    border-radius:50%;
-    width: 247px;
-    height: 247px;
-    overflow:hidden;
-    border:7px solid #96B617;
+#header_image .mask {
+	position: absolute;
+	top:0;
+	right:0;
+	z-index: 6;
+}
+#header_image .header-slider {
+    width:360px;
+    height:360px;
 }
 #access {
     position: absolute;

@@ -630,3 +630,14 @@ function yasuni_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'yasuni_body_classes' );
 
+
+function yasuni_build_header_slider(){
+
+	$nivo_slides = '';
+	$slides = boom_get_header_images();
+	foreach( $slides as $slide ) {
+		$nivo_slides .= "<img src='{$slide}' alt='' />";
+	}
+	echo $nivo_slides;
+
+}

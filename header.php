@@ -42,23 +42,18 @@
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="shortcut icon" href="<?php bloginfo('template_directory')?>/images/favicon.ico" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.js" type="text/javascript"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/nivo.slider.js" type="text/javascript"></script>
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
-<?php
-	/* We add some JavaScript to pages with the comment form
-	 * to support sites with threaded comments (when in use).
-	 */
-	if ( is_singular() && get_option( 'thread_comments' ) )
-		wp_enqueue_script( 'comment-reply' );
-
-	/* Always have wp_head() just before the closing </head>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to add elements to <head> such
-	 * as styles, scripts, and meta tags.
-	 */
-	wp_head();
-?>
+	<script>
+		$(function(){
+		    $('.header-slider').nivoSlider({
+	    			<?php echo boom_nivo_slider_options(); ?>
+		    });
+		})
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -85,7 +80,9 @@
 
 		<div id="parallax" <?php if ( !is_front_page() ) { echo 'class="inner"';};?>>
             <div id="header_image" class = "<?php if ( is_front_page() ) echo "home"; ?>">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><span>
+                <div class="mask"><img src="<?php echo get_template_directory_uri(); ?>/images/mask.png" /></div>
+                <div class="header-slider-wrapper">
+                <div class="header-slider">
                 <?php
                 // The header image
                 // Check if this is a post or page, if it has a thumbnail, and if it's a big one
@@ -95,10 +92,12 @@
                         $image[1] >= HEADER_IMAGE_WIDTH ) :
                     // Houston, we have a new header image!
                     echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
-                else : ?>
-                    <img src="<?php header_image(); ?>" />
+                else : 
+                    yasuni_build_header_slider();
+                ?>
                 <?php endif; // end check for featured image or standard header ?>
-                </span></a>
+                </div>
+                </div>
             </div>
             <img id="swash" src="<?php echo get_template_directory_uri(); ?>/images/swash.png" />
         	<img id="asset_tree_a"  src="<?php echo get_template_directory_uri(); ?>/images/asset_tree.png" />
@@ -107,7 +106,6 @@
             <?php if ( is_front_page() ) { ?>
         	<img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
 
-        	<img id="swash1" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
         	<img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
 			<?php } else { ?>
 				<img id="swash2" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
