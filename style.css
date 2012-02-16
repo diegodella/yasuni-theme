@@ -100,20 +100,23 @@ h1 {
 
 /* =Structure
 ----------------------------------------------- */
+#branding {
+	position: relative;
+}
 article {
     margin-bottom: 2em;
 }
 #page {
     width: 950px;
     margin:0 auto;
-    position:relative;
 
 }
 #main-home {
     background: #FFF;
-    padding: 100px 15px 15px;
+    padding: 15px;
     overflow: hidden;
-    margin-top:-40px
+    clear: both;
+    margin-top: 40px;
 }
 #main {
 	background: #FFF;
@@ -153,9 +156,9 @@ article {
 }
 #parallax {
     position:relative;
-    height: 400px;
+    height: 385px;
     margin: 3px 0;
-    z-index:999;
+    z-index:0;
 }
 #parallax.inner {
     height: 340px;
@@ -191,7 +194,7 @@ article {
     top: 55px;
 }
 #asset_tree_a {
-    bottom: 10px;
+    bottom: -15px;
     left: 496px;
 }
 .inner #asset_tree_a {
@@ -199,7 +202,7 @@ article {
     top: 165px;
 }
 #asset_tree_1 {
-    top: 181px;
+    bottom: -5px;
     left: 18px;
 }
 .inner #asset_tree_1 {
@@ -239,13 +242,37 @@ article {
     height:360px;
 }
 #access {
-    position: absolute;
-    top: 0;
-    right:0;
-    width: 65%;
-    z-index: 9999;
-    padding: 7px 0;
+	padding: 7px 0;
+	border-top: 6px solid #FFF;
+	box-shadow: 0 0px 7px #000;
+	background:#63A215;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	height: 18px;
 }
+#access .children {
+	display:none;
+}
+#access .children li {
+	float: none;
+}
+#access ul>li:hover {
+	background:#FFF;
+	border-radius: 3px;
+	box-shadow: 1px 1px 4px #000;
+}
+#access li:hover a {
+	color: #555;
+}
+#access li:hover .children {
+	display:block;
+}
+#access .menu {
+	width: 950px;
+	margin:0 auto;
+}
+
 #access li {
     float:left;
     margin: 0;

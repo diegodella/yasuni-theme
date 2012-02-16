@@ -60,14 +60,6 @@
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
         <?php do_action('icl_language_selector'); ?>
-		<nav id="access" role="navigation">
-			<h3 class="assistive-text"><?php _e( 'Main menu', 'yasuni' ); ?></h3>
-			<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'yasuni' ); ?>"><?php _e( 'Skip to primary content', 'yasuni' ); ?></a></div>
-			<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'yasuni' ); ?>"><?php _e( 'Skip to secondary content', 'yasuni' ); ?></a></div>
-			<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 1 ) ); ?>
-		</nav><!-- #access -->
 		<h1 id="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span><?php bloginfo( 'name' ); ?></span></a></h1>
 		<?php
 			// Check to see if the header image has been removed
@@ -115,6 +107,13 @@
         <?php endif; // end check for removed header image ?>
 
 	</header><!-- #branding -->
-
+	<nav id="access" role="navigation">
+		<h3 class="assistive-text"><?php _e( 'Main menu', 'yasuni' ); ?></h3>
+		<?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+		<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'yasuni' ); ?>"><?php _e( 'Skip to primary content', 'yasuni' ); ?></a></div>
+		<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'yasuni' ); ?>"><?php _e( 'Skip to secondary content', 'yasuni' ); ?></a></div>
+		<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 0 ) ); ?>
+	</nav>
 
 	<div id="main<?php if ( is_front_page() ) { echo "-home"; } ?>">
