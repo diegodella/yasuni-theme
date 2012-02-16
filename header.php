@@ -50,6 +50,7 @@
 	<script>
 		$(function(){
 		    $('.header-slider').nivoSlider({
+	    			<?php echo boom_nivo_slider_options(); ?>
 		    });
 		})
 	</script>
@@ -91,6 +92,8 @@
                         $image[1] >= HEADER_IMAGE_WIDTH ) :
                     // Houston, we have a new header image!
                     echo get_the_post_thumbnail( $post->ID, 'post-thumbnail' );
+                else : 
+                    yasuni_build_header_slider();
                 ?>
                 <?php endif; // end check for featured image or standard header ?>
                 </div>
