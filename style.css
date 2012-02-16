@@ -539,40 +539,40 @@ article {
     
 }
 
-#Adventure h2, #Adventure p {
+#page-44 h2, #page-44 p {
     background:#B4B309;
 }
-#Adventure:after {
+#page-44:after {
     background-image: url(images/asset_arrow_5.png);
 }
-#Galapagos h2, #Galapagos p {
+#page-42 h2, #page-42 p {
     background:#36A2AC;
 }
-#Galapagos:after {
+#page-42:after {
     background-image: url(images/asset_arrow_4.png);
 }
-#Coast h2, #Coast p {
+#page-40 h2, #page-40 p {
     background:#DC721C;
 }
-#Coast:after {
+#page-40:after {
     background-image: url(images/asset_arrow_3.png);
 }
-#Andes h2, #Andes p {
+#page-38 h2, #page-38 p {
     background:#5E84B3;
 }
-#Andes:after {
+#page-38:after {
     background-image: url(images/asset_arrow_2.png);
 }
-#Amazon h2, #Amazon p {
+#page-36 h2, #page-36 p {
     background:#5C8B01;
 }
-#Amazon:after {
+#page-36:after {
     background-image: url(images/asset_arrow.png);
 }
-#Photography h2, #Photography p {
+#page-32 h2, #page-32 p {
     background:#CC4E4F;
 }
-#Photography:after {
+#page-32:after {
     background-image: url(images/asset_arrow_6.png);
 }
 /**/

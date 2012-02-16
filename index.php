@@ -24,7 +24,7 @@ get_header(); ?>
                 ));
                 while (have_posts()): the_post();
             ?>
-                <li id="<?php the_title();?>">
+                <li id="page-<?php the_ID();?>">
                     <?php the_excerpt(); ?>
                     <h2>
                         <a href="<?php echo get_page_link($pagg->ID); ?>"><?php the_title(); ?></a>
