@@ -135,7 +135,8 @@ function yasuni_setup() {
 	add_image_size( 'large-feature', HEADER_IMAGE_WIDTH, HEADER_IMAGE_HEIGHT, true ); // Used for large feature (header) images
 	add_image_size( 'small-feature', 500, 300 ); // Used for featured posts if a large-feature doesn't exist
 	add_image_size( 'small', 350, 350 );
-
+	add_image_size( 'mini', 100, 100 );
+	
 	// Turn on random header image rotation by default.
 	add_theme_support( 'custom-header', array( 'random-default' => true ) );
 
@@ -313,7 +314,7 @@ endif; // yasuni_admin_header_image
  * function tied to the excerpt_length filter hook.
  */
 function yasuni_excerpt_length( $length ) {
-	return 40;
+	return 120;
 }
 add_filter( 'excerpt_length', 'yasuni_excerpt_length' );
 

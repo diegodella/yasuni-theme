@@ -17,6 +17,31 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" role="main">
 			<?php 
+            query_posts( 'category_name=Noticias&showposts=5' );
+			if ( have_posts() ) : ?>
+				<?php /* Start the Loop */ ?>
+                <div id="news">
+                <ul>
+				<?php while ( have_posts() ) : the_post(); ?>
+				<li>
+                    <a class="thumb" href="#article-<?php the_ID(); ?>" >
+	                    <?php the_post_thumbnail('mini'); ?>
+                    </a>
+                </li>
+				<?php endwhile; ?>
+				</ul>
+				<?php while ( have_posts() ) : the_post(); ?>
+                <article id="article-<?php the_ID(); ?>">
+                    <h1><?php the_title(); ?></h1>
+                    <?php the_excerpt(); ?>
+                </article>
+				<?php endwhile; ?>
+                </div>
+			<?php 
+            endif;
+            wp_reset_query();   
+			?>
+    		<?php 
             query_posts( 'category_name=Home&showposts=1' );
 			if ( have_posts() ) : ?>
 
@@ -46,7 +71,6 @@ get_header(); ?>
 			endif; 
             wp_reset_query();   
 			?>
-
 			</div><!-- #content -->
 		</div><!-- #primary -->
 

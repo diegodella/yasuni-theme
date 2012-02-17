@@ -125,6 +125,19 @@ article {
     overflow: hidden;
     
 }
+#content {
+    padding-top:1em;
+    clear: both;
+}
+#secondary h3 {
+    text-align:right;
+    font: 48px 'OblikBold', 'Helvetica', 'Arial';
+    color:#63A215; 
+    text-transform: lowercase;
+    margin: 5px 0;
+    padding:0;
+    line-height:1em;
+}
 #site-title {
     background:url(images/logo.png) no-repeat;
     position: absolute;
@@ -242,13 +255,15 @@ article {
     height:360px;
 }
 #access {
-	padding: 7px 0;
-	border-top: 6px solid #FFF;
-	box-shadow: 0 0px 7px #000;
-	background:#63A215;
-	position: absolute;
-	width: 100%;
-	left: 0;
+    position: absolute;
+    width: 100%;
+    background: #333;
+    left: 0;
+    text-align: center;
+    padding: 10px 0;
+    border: 2px solid #63A215;
+    box-shadow: 0 -1px 2px #000, 0 1px 2px #000;
+    border-width: 2px 0;
 	height: 18px;
 }
 #access .children {
@@ -294,29 +309,22 @@ article {
     padding: 2em;
     margin: 0 0 50px;
 }
-#first {
-    float:left;
-    overflow:hidden;
+#sponsors {
+    position: absolute;
+    width: 100%;
+    background: #333;
+    left: 0;
+    text-align: center;
+    padding: 5px 0;
+    border: 2px solid #63A215;
+    box-shadow: 0 -1px 2px #000, 0 1px 2px #000;
+    border-width: 2px 0;
 }
-#first li {
-    float:left;
+#sponsors .widget-title {
+    display:none;
 }
-#first a {
-    display:block; 
-    width: 70px;
-    height: 70px;
-    text-indent:99999px;
-    overflow:hidden;
-    
-}
-#menu-item-16 a {
-    background: url(images/logo_ecuador.gif) no-repeat;
-}
-#menu-item-17 a {
-    background: url(images/logo_captur.gif) no-repeat;
-}
-#menu-item-18 a {
-    background: url(images/logo_quito.gif) no-repeat;
+#sponsors li {
+    display:inline;
 }
 #second {
     float:left;
@@ -392,17 +400,18 @@ article {
 }
 
 #text-3 {
-    margin: -115px 0 10px;
     border: 2px solid #CCC;
     box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
     background: #EEE url(images/bullet.jpg) repeat-y right;
     border-radius: 5px;
     padding: 10px 30px 10px 10px;
     border-image: initial;
+    margin: 1em 0;
 }
 #text-3 h3 {
-    font: 1.5em 'OblikBold', 'Helvetica', 'Arial', sans-serif;
-    font-weight: bold;
+    font: 2em 'OblikBold', 'Helvetica', 'Arial', sans-serif;
+    text-align:left;
+    text-transform: none;
     color:#3BA1AD;
     background: url(images/contact.jpg) no-repeat right;
     padding: 20px 0 4px;
@@ -569,19 +578,7 @@ article {
 #page-32:after {
     background-image: url(images/asset_arrow_6.png);
 }
-/**/
-#content {
-    clear: both;
-}
-#secondary h3 {
-    text-align:right;
-    font: 48px 'OblikBold', 'Helvetica', 'Arial';
-    color:#63A215; 
-    text-transform: lowercase;
-    margin: 5px 0;
-    padding:0;
-    line-height:1em;
-}
+
 
 #latest-videos h3 {
     background: url(images/bg_tv.jpg) no-repeat left bottom;
@@ -589,6 +586,7 @@ article {
 }
 /*Button*/
 a.call {
+    float:right;
     background-color: #d7e5f5;
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7e5f5), color-stop(100%, #cbe0f5));
     background-image: -webkit-linear-gradient(top, #d7e5f5, #cbe0f5);
@@ -616,7 +614,7 @@ a.call {
     padding: 6px 0 7px 0;
     text-align: center;
     text-shadow: 0 1px 1px #fff;
-    width: 50px; 
+    width: 80px; 
 }
 a.call:hover {
     background-color: #ccd9e8;
@@ -645,4 +643,25 @@ a.call:active {
     -ms-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
     -o-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
     box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee; 
+}
+
+#news {
+    height:320px;
+    position:relative;
+    margin-bottom:1em;
+
+}
+#news p {
+    line-height:1.5em;
+}
+#news ul {
+    float:right;
+    width: 100px;
+}
+#news article {
+    position:absolute;
+    background:#FFF;
+    left:0;
+    top:0;
+    width:435px;
 }
