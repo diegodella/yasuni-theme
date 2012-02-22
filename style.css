@@ -265,6 +265,7 @@ article {
     box-shadow: 0 -1px 2px #000, 0 1px 2px #000;
     border-width: 2px 0;
 	height: 18px;
+	z-index: 9999;
 }
 #access .children {
 	display:none;
@@ -272,16 +273,20 @@ article {
 #access .children li {
 	float: none;
 }
-#access ul>li:hover {
+.menu>ul>li:hover {
 	background:#FFF;
 	border-radius: 3px;
 	box-shadow: 1px 1px 4px #000;
+	padding-bottom:4px !important;
 }
 #access li:hover a {
 	color: #555;
 }
 #access li:hover .children {
 	display:block;
+    border-top:1px solid #999;
+    margin: 0 -15px;
+
 }
 #access .menu {
 	width: 950px;
@@ -338,6 +343,7 @@ article {
 }
 #nav_menu-3 li {
     float:left;
+    
 }
 #nav_menu-3 a {
     text-indent: -9999px;
@@ -646,22 +652,70 @@ a.call:active {
 }
 
 #news {
-    height:320px;
+    height:420px;
     position:relative;
-    margin-bottom:1em;
-
+    margin: 0 -2em 1em;
+    background: #333;
+    border: 2px solid #63A215;
+    box-shadow: 0 1px 2px #000;
+    border-width: 0 0 2px;
 }
 #news p {
     line-height:1.5em;
 }
-#news ul {
-    float:right;
-    width: 100px;
+#news .previews {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    padding:0 20px;
+    z-index:10;
+}
+
+#news .previews li{
+    float: left;
+    margin:5px;      
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    padding: 5px;
+    
+}
+
+#news .previews li:hover{
+    box-shadow: 4px 4px 20px #000;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+#news li.active {
+    display: block;
+    border: 1px solid #999;
+    border-color: white #999 #999;
+    border-radius: 0 0 4px 4px;
+    margin-top: -7px;
+    background: white;
+    padding-top: 11px;
+}
+#news li.active:hover {
+    box-shadow:0 0 0 #000;
+}
+#news .thumb {
+    display:block;
+    width:90px;
+    height: 70px;
+    overflow: hidden;
+ 
 }
 #news article {
-    position:absolute;
-    background:#FFF;
-    left:0;
-    top:0;
-    width:435px;
+    position: absolute;
+    background: white;
+    left: 0;
+    top: 0;
+    height: 300px;
+    border:1px solid #FFF;
+    border-color: #FFF #FFF #999;
+    padding: 1em 2em 0;
+    margin: 0;
+    
 }

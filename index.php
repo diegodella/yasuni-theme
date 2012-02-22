@@ -21,11 +21,11 @@ get_header(); ?>
 			if ( have_posts() ) : ?>
 				<?php /* Start the Loop */ ?>
                 <div id="news">
-                <ul>
+                <ul class="previews">
 				<?php while ( have_posts() ) : the_post(); ?>
 				<li>
                     <a class="thumb" href="#article-<?php the_ID(); ?>" >
-	                    <?php the_post_thumbnail('mini'); ?>
+	                    <?php the_post_thumbnail('mini', true); ?>
                     </a>
                 </li>
 				<?php endwhile; ?>
