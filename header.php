@@ -102,7 +102,6 @@
 
         	<img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
 			<?php } else { ?>
-				<img id="swash2" src="<?php echo get_template_directory_uri(); ?>/images/swash_1.png" />
 				<img id="asset_bird_blue" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_blue.png" />
 			<?php } ?>
         </div>
@@ -118,4 +117,4 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 0 ) ); ?>
 	</nav>
 
-	<div id="main<?php if ( is_front_page() ) { echo "-home"; } ?>">
+	<div id="main">

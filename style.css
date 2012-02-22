@@ -111,19 +111,12 @@ article {
     margin:0 auto;
 
 }
-#main-home {
+#main {
     background: #FFF;
     padding: 15px;
     overflow: hidden;
     clear: both;
     margin-top: 40px;
-}
-#main {
-	background: #FFF;
-	margin: -90px 0px;
-    padding: 150px 15px 15px;
-    overflow: hidden;
-    
 }
 #content {
     padding-top:1em;
@@ -173,9 +166,6 @@ article {
     margin: 3px 0;
     z-index:0;
 }
-#parallax.inner {
-    height: 340px;
-}
 #parallax>img {
     position: absolute;
     z-index:6;
@@ -202,27 +192,13 @@ article {
     top: 138px;
     left: 485px;
 }
-.inner #asset_bird_1 {
-    left: 585px;
-    top: 55px;
-}
 #asset_tree_a {
     bottom: -15px;
     left: 496px;
 }
-.inner #asset_tree_a {
-    left: 496px;
-    top: 165px;
-}
 #asset_tree_1 {
     bottom: -5px;
     left: 18px;
-}
-.inner #asset_tree_1 {
-    left: 18px;
-    top: 111px;
-    width: 106px;
-    height: 76px;
 }
 #menu_list {
     background: none repeat scroll 0 0 #5D83B3;
