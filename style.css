@@ -296,7 +296,7 @@ article {
     border-width: 2px 0;
 }
 #colophon #supplementary {
-    width:960px;
+    width:920px;
     margin: 0 auto;
     text-align: left;
     padding: 0 1em;
@@ -316,7 +316,7 @@ article {
 #contact-info {
     clear:both;
     text-align: center;
-    margin: 2em 0;
+    margin: 2em -20px;
     background: #FFF;
     padding: 2em;
 }
