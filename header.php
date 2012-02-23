@@ -99,8 +99,6 @@
         	<img id="asset_bird_1" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_1.png" />
             <?php if ( is_front_page() ) { ?>
         	<img id="asset_bird" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird.png" />
-
-        	<img id="slogan" src="<?php echo get_template_directory_uri(); ?>/images/slogan.png" />
 			<?php } else { ?>
 				<img id="asset_bird_blue" src="<?php echo get_template_directory_uri(); ?>/images/asset_bird_blue.png" />
 			<?php } ?>

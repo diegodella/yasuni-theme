@@ -123,13 +123,13 @@ article {
     clear: both;
 }
 #secondary h3 {
-    text-align:right;
-    font: 48px 'OblikBold', 'Helvetica', 'Arial';
+    text-align:left;
+    font: 28px 'OblikBold', 'Helvetica', 'Arial';
     color:#63A215; 
     text-transform: lowercase;
     margin: 5px 0;
-    padding:0;
-    line-height:1em;
+    padding: 0 0px;
+    line-height:1em;    
 }
 #site-title {
     background:url(images/logo.png) no-repeat;
@@ -139,7 +139,7 @@ article {
 }
 #site-title a {
     display:block;
-    width:280px;
+    width:330px;
     height:150px;
     overflow:hidden;
 }
@@ -215,10 +215,10 @@ article {
     right: 0;
 }
 #header_image .header-slider-wrapper {
-	margin: 20px 30px;
+    margin: 20px 30px;
     width:380px;
     height:380px;
-    overflow: hidden;    
+    overflow: hidden;  
 }
 #header_image .mask {
 	position: absolute;
