@@ -9,13 +9,22 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" class="page-post">
-	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
-
+	<?php if($post->post_parent) {
+	  	$children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+    ?>
+	<div class="thumbnail">
+	<?php 
+		if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+  			get_the_post_thumbnail($post->ID, 'thumbnail');
+		} 
+	?>
+	</div>
 	<div class="entry-content">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-content -->
+	<?php 
+		}
+	?>
 </article><!-- #post-<?php the_ID(); ?> -->
 <div id="sidebar-menu-page">
 	<?php
