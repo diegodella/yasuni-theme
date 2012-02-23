@@ -105,12 +105,26 @@ h1 {
 }
 article {
     margin-bottom: 2em;
+    float: left;
 }
+#content-page {
+    width: 910px;
+    }
+#sidebar-menu-page {
+    width: 300px;
+    display: inline-block;
+    float:right;
+    }
+#sidebar-menu-page a {
+    color:#5E84B3;
+    }
 #page {
     width: 950px;
     margin:0 auto;
-
 }
+.page-post {
+    width: 570px;
+    }
 #main {
     background: #FFF;
     padding: 15px;
@@ -285,12 +299,6 @@ article {
 }
 /* Footer */
 #colophon {
-    background: #EEE;
-    border-top: 1px dashed #999;
-    padding: 2em;
-    margin: 0 0 50px;
-}
-#sponsors {
     position: absolute;
     width: 100%;
     background: #333;
@@ -301,44 +309,43 @@ article {
     box-shadow: 0 -1px 2px #000, 0 1px 2px #000;
     border-width: 2px 0;
 }
-#sponsors .widget-title {
-    display:none;
+#colophon #supplementary {
+    width:920px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1em;
+}
+#supplementary .widget-title {
+    font-size: 1.2em;
+    color: #FFF;
+    font-weight: bold;
+}
+#sponsors {
+    float:left;
+    width:70%;
 }
 #sponsors li {
     display:inline;
 }
-#second {
-    float:left;
+#contact-info {
+    clear:both;
+    text-align: center;
+    margin: 2em -20px;
+    background: #FFF;
+    padding: 2em;
 }
-#second p {
-    color: #555;
+#contact-info p {
+    color: #333;
     font-size: 80%;
+}
+#ama-la-vida {
+    float:right;
+}
+#presidencia {
+    float:left;
 }
 #third {
     float:right;
-}
-#nav_menu-3 li {
-    float:left;
-    
-}
-#nav_menu-3 a {
-    text-indent: -9999px;
-    overflow: hidden;
-    width:50px;
-    height: 40px;
-    display: block;
-}
-#menu-item-12 a{
-    background: url(images/logo_mastercard.gif) no-repeat;
-}
-#menu-item-13 a{
-    background: url(images/logo_americanexpress.gif) no-repeat;
-}
-#menu-item-14 a{
-    background: url(images/logo_visa.gif) no-repeat;
-}
-#menu-item-15 a{
-    background: url(images/logo_diners.gif) no-repeat;
 }
 
 /*Language selector*/
@@ -381,7 +388,7 @@ article {
     transition: all 0.3s;
 }
 
-#text-3 {
+#text-3, #text-4 {
     border: 2px solid #CCC;
     box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
     background: #EEE url(images/bullet.jpg) repeat-y right;
@@ -390,7 +397,7 @@ article {
     border-image: initial;
     margin: 1em 0;
 }
-#text-3 h3 {
+#text-3 h3, #text-4 h3 {
     font: 2em 'OblikBold', 'Helvetica', 'Arial', sans-serif;
     text-align:left;
     text-transform: none;
@@ -398,6 +405,14 @@ article {
     background: url(images/contact.jpg) no-repeat right;
     padding: 20px 0 4px;
 }
+#text-5 {
+    text-align: center;
+    box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
+    background: #EEE url(images/bullet.jpg) repeat-y right;
+    border-radius: 5px;
+    padding: 10px 30px 10px 10px;
+    border-image: initial;
+    }
 .skype {
     display: block;
     background: url(images/skype.jpg) no-repeat;
@@ -415,26 +430,29 @@ article {
 .menu-social-container a{
     display:block;
 }
+#menu-social-1 li {
+    float:left;
+}
 #nav_menu-5 {
     position: absolute;
     top:140px;
     right:5px;
     z-index:99999;
 }
-#nav_menu-5 a{86
+#nav_menu-5 a, #nav_menu-3 a{
     display:block;
     width: 36px;
     height: 36px;
     text-indent:-9999px;
     overflow:hidden;
 }
-#menu-item-9 a {
+#menu-item-9 a, .menu-item-9 a {
     background:url(images/logo_twitter.png) no-repeat;
 }
-#menu-item-10 a {
+#menu-item-10 a, .menu-item-10 a {
     background:url(images/logo_facebook.png) no-repeat;
 }
-#menu-item-11 a {
+#menu-item-11 a, .menu-item-11 a {
     background:url(images/logo_youtube.png) no-repeat;
 }
 /*tours*/
@@ -693,5 +711,4 @@ a.call:active {
     border-color: #FFF #FFF #999;
     padding: 1em 2em 0;
     margin: 0;
-    
 }
