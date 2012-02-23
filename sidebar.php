@@ -14,7 +14,7 @@ if ( 'content' != $current_layout ) :
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
             <aside id="latest-videos" class="column center">
-                <h3>Tv</h3>
+                <h3>Multimedia</h3>
                 <?php
                 query_posts( 'category_name=Videos&showposts=1' );
                 while (have_posts() ) : the_post();

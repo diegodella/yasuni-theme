@@ -285,12 +285,6 @@ article {
 }
 /* Footer */
 #colophon {
-    background: #EEE;
-    border-top: 1px dashed #999;
-    padding: 2em;
-    margin: 0 0 50px;
-}
-#sponsors {
     position: absolute;
     width: 100%;
     background: #333;
@@ -301,44 +295,43 @@ article {
     box-shadow: 0 -1px 2px #000, 0 1px 2px #000;
     border-width: 2px 0;
 }
-#sponsors .widget-title {
-    display:none;
+#colophon #supplementary {
+    width:960px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 0 1em;
+}
+#supplementary .widget-title {
+    font-size: 1.2em;
+    color: #FFF;
+    font-weight: bold;
+}
+#sponsors {
+    float:left;
+    width:70%;
 }
 #sponsors li {
     display:inline;
 }
-#second {
-    float:left;
+#contact-info {
+    clear:both;
+    text-align: center;
+    margin: 2em 0;
+    background: #FFF;
+    padding: 2em;
 }
-#second p {
-    color: #555;
+#contact-info p {
+    color: #333;
     font-size: 80%;
+}
+#ama-la-vida {
+    float:right;
+}
+#presidencia {
+    float:left;
 }
 #third {
     float:right;
-}
-#nav_menu-3 li {
-    float:left;
-    
-}
-#nav_menu-3 a {
-    text-indent: -9999px;
-    overflow: hidden;
-    width:50px;
-    height: 40px;
-    display: block;
-}
-#menu-item-12 a{
-    background: url(images/logo_mastercard.gif) no-repeat;
-}
-#menu-item-13 a{
-    background: url(images/logo_americanexpress.gif) no-repeat;
-}
-#menu-item-14 a{
-    background: url(images/logo_visa.gif) no-repeat;
-}
-#menu-item-15 a{
-    background: url(images/logo_diners.gif) no-repeat;
 }
 
 /*Language selector*/
@@ -415,26 +408,29 @@ article {
 .menu-social-container a{
     display:block;
 }
+#menu-social-1 li {
+    float:left;
+}
 #nav_menu-5 {
     position: absolute;
     top:140px;
     right:5px;
     z-index:99999;
 }
-#nav_menu-5 a{86
+#nav_menu-5 a, #nav_menu-3 a{
     display:block;
     width: 36px;
     height: 36px;
     text-indent:-9999px;
     overflow:hidden;
 }
-#menu-item-9 a {
+#menu-item-9 a, .menu-item-9 a {
     background:url(images/logo_twitter.png) no-repeat;
 }
-#menu-item-10 a {
+#menu-item-10 a, .menu-item-10 a {
     background:url(images/logo_facebook.png) no-repeat;
 }
-#menu-item-11 a {
+#menu-item-11 a, .menu-item-11 a {
     background:url(images/logo_youtube.png) no-repeat;
 }
 /*tours*/
