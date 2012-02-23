@@ -17,7 +17,6 @@
 		<?php the_content(); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-<?php the_ID(); ?> -->
-<?php ?>
 <div id="sidebar-menu-page">
 	<?php
 	  if($post->post_parent)
