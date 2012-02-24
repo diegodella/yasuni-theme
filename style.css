@@ -355,6 +355,8 @@ article {
 	background: url("images/logo-certificate.png") no-repeat;
 	width: 103px;
 	height: 41px;
+	margin-left: 1045px;
+	margin-top: -30px;
 }
 /*Language selector*/
 #lang_sel {
