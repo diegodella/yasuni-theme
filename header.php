@@ -113,6 +113,9 @@
 		<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'yasuni' ); ?>"><?php _e( 'Skip to secondary content', 'yasuni' ); ?></a></div>
 		<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assiged to the primary position is the one used. If none is assigned, the menu with the lowest ID is used. */ ?>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'depth' => 0 ) ); ?>
+		<div id="search">
+			<?php get_search_form( $echo ); ?>
+		</div>
 	</nav>
 
 	<div id="main">

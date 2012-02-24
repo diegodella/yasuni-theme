@@ -297,6 +297,10 @@ article {
 #access a:hover {
     text-shadow: 0 0 1px #333, 0 0 10px white;
 }
+#search {
+	float:left;
+	margin-top: -4px;
+}
 /* Footer */
 #colophon {
     position: absolute;
@@ -322,7 +326,7 @@ article {
 }
 #sponsors {
     float:left;
-    width:70%;
+    width:100%;
 }
 #sponsors li {
     display:inline;
@@ -347,7 +351,11 @@ article {
 #third {
     float:right;
 }
-
+#certificate {
+	background: url("images/logo-certificate.png") no-repeat;
+	width: 103px;
+	height: 41px;
+}
 /*Language selector*/
 #lang_sel {
     position: absolute;
@@ -584,6 +592,10 @@ article {
     background: url(images/bg_tv.jpg) no-repeat left bottom;
     
 }
+#contributions {
+    width: 320px;
+    height: 254px;
+    }
 /*Button*/
 a.call {
     float:right;
