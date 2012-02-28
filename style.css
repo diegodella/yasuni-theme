@@ -327,6 +327,7 @@ article {
 #sponsors {
     float:left;
     width:100%;
+    text-align:center;
 }
 #sponsors li {
     display:inline;
