@@ -398,16 +398,17 @@ function yasuni_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
-
+	
 	register_sidebar( array(
-		'name' => __( 'Sidebar Custom Post', 'yasuni' ),
-		'id' => 'sidebar-custompost-menu',
-		'description' => __( 'Sidebar Custom Post', 'yasuni' ),
+		'name' => __( 'Sidebar Menu Page', 'yasuni' ),
+		'id' => 'sidebar-menu-page',
+		'description' => __( 'Sidebar Menu Page', 'yasuni' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => "</aside>",
-		'before_title' => '',
-		'after_title' => '',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
 	) );
+	
 	register_sidebar( array(
 		'name' => __( 'Footer Area One', 'yasuni' ),
 		'id' => 'sidebar-3',

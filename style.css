@@ -105,12 +105,26 @@ h1 {
 }
 article {
     margin-bottom: 2em;
+    float: right;
 }
+#content-page {
+    width: 910px;
+    }
+#sidebar-menu-page {
+	width: 220px;
+	display: inline-block;
+	float: left;
+}
+#sidebar-menu-page a {
+    color:#5E84B3;
+    }
 #page {
     width: 950px;
     margin:0 auto;
-
 }
+.page-post {
+    width: 670px;
+    }
 #main {
     background: #FFF;
     padding: 15px;
@@ -374,7 +388,7 @@ article {
     transition: all 0.3s;
 }
 
-#text-3 {
+#text-3, #text-4 {
     border: 2px solid #CCC;
     box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
     background: #EEE url(images/bullet.jpg) repeat-y right;
@@ -383,7 +397,7 @@ article {
     border-image: initial;
     margin: 1em 0;
 }
-#text-3 h3 {
+#text-3 h3, #text-4 h3 {
     font: 2em 'OblikBold', 'Helvetica', 'Arial', sans-serif;
     text-align:left;
     text-transform: none;
@@ -391,6 +405,14 @@ article {
     background: url(images/contact.jpg) no-repeat right;
     padding: 20px 0 4px;
 }
+#text-5 {
+    text-align: center;
+    box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
+    background: #EEE url(images/bullet.png) repeat-y right;
+    border-radius: 5px;
+    padding: 10px 30px 10px 10px;
+    border-image: initial;
+    }
 .skype {
     display: block;
     background: url(images/skype.jpg) no-repeat;
@@ -689,5 +711,4 @@ a.call:active {
     border-color: #FFF #FFF #999;
     padding: 1em 2em 0;
     margin: 0;
-    
 }
