@@ -74,6 +74,9 @@
 
 		<div id="parallax" <?php if ( !is_front_page() ) { echo 'class="inner"';};?>>
             <div id="header_image" class = "<?php if ( is_front_page() ) echo "home"; ?>">
+                <div id="certificate">
+		    <img src="http://think-thanks.com/demos/yasuni/wp-content/themes/yasuni/images/logo-certificate.png" width="" height="">
+	        </div>
                 <div class="mask"><img src="<?php echo get_template_directory_uri(); ?>/images/mask.png" /></div>
                 <div class="header-slider-wrapper">
                 <div class="header-slider">

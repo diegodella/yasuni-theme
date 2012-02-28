@@ -21,9 +21,6 @@
 					get_sidebar( 'footer' );
 			?>
     <br class="clear" />
-    <div id="certificate">
-		<img src="http://think-thanks.com/demos/yasuni/wp-content/themes/yasuni/images/logo-certificate.png" width="" height="">
-	</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

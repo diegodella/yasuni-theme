@@ -338,6 +338,9 @@ article {
     margin: 2em -20px;
     background: #FFF;
     padding: 2em;
+    border-top: 15px solid #333;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 7px 10px #111
 }
 #contact-info p {
     color: #333;
@@ -662,4 +665,11 @@ a.call:active {
 
 #content-slideshow {
     margin: 0 0 1em;
+}
+
+
+#secondary .tubepress_thumb{
+    text-align:center;
+    margin: 0 auto;
+    width: 320px;
 }

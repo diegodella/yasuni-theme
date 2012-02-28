@@ -36,7 +36,7 @@
     
 	<div id="contact-info" class="widget-area" role="complementary">
 	    <a id="ama-la-vida" href="http://www.mtop.gob.ec/img/b_enlaces/ecuador_ama_la_vida.png"><img src="http://www.mtop.gob.ec/img/b_enlaces/ecuador_ama_la_vida.png"></a>
-        <a id="presidencia" href="http://www.presidencia.gov.ec/"><img src="http://yasuni.devezone.net/wp-content/themes/yasuni-theme/_inc/images/bn_gobierno.png" ></a>
+        <a id="presidencia" href="http://www.presidencia.gov.ec/"><img src="http://www.think-thanks.com/demos/yasuni/wp-content/themes/yasuni/images/logos/bn_gobierno.png" ></a>
 		<?php dynamic_sidebar( 'sidebar-4' ); ?>
 	</div><!-- #second .widget-area -->
 	<?php endif; ?>
