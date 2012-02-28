@@ -367,9 +367,9 @@ article {
     background: white;
     padding: 7px 5px 5px;
     border-radius: 0 0 5px 5px;
-    width: 32px;
+    width: 52px;
     text-align:left;
-    height:20px;
+    height:18px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -386,16 +386,16 @@ article {
 #lang_sel li ul{
     display:none;
     opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 #lang_sel li:hover ul {
     display:block;
     opacity: 1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
 }
 
 #text-3, #text-4 {
@@ -659,70 +659,6 @@ a.call:active {
     box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee; 
 }
 
-#news {
-    height:420px;
-    position:relative;
-    margin: 0 -2em 1em;
-    background: #333;
-    border: 2px solid #63A215;
-    box-shadow: 0 1px 2px #000;
-    border-width: 0 0 2px;
-}
-#news p {
-    line-height:1.5em;
-}
-#news .previews {
-    position: absolute;
-    bottom: 0;
-    height: 100px;
-    padding:0 20px;
-    z-index:10;
-}
-
-#news .previews li{
-    float: left;
-    margin:5px;      
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    padding: 5px;
-    
-}
-
-#news .previews li:hover{
-    box-shadow: 4px 4px 20px #000;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-
-}
-#news li.active {
-    display: block;
-    border: 1px solid #999;
-    border-color: white #999 #999;
-    border-radius: 0 0 4px 4px;
-    margin-top: -7px;
-    background: white;
-    padding-top: 11px;
-}
-#news li.active:hover {
-    box-shadow:0 0 0 #000;
-}
-#news .thumb {
-    display:block;
-    width:90px;
-    height: 70px;
-    overflow: hidden;
- 
-}
-#news article {
-    position: absolute;
-    background: white;
-    left: 0;
-    top: 0;
-    height: 300px;
-    border:1px solid #FFF;
-    border-color: #FFF #FFF #999;
-    padding: 1em 2em 0;
-    margin: 0;
+#content-slideshow {
+    margin: 0 0 1em;
 }

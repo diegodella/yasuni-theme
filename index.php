@@ -16,27 +16,18 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
-			<?php 
-            query_posts( 'category_name=Noticias&showposts=5' );
+			<div class="slider-wrapper theme-default">
+				<?php include (ABSPATH . '/wp-content/plugins/wp-content-slideshow/content-slideshow.php');?>
+            </div>
+			<?php query_posts( 'category_name=Noticias&showposts=5' );
 			if ( have_posts() ) : ?>
 				<?php /* Start the Loop */ ?>
                 <div id="news">
-                <ul class="previews">
+				
 				<?php while ( have_posts() ) : the_post(); ?>
-				<li>
-                    <a class="thumb" href="#article-<?php the_ID(); ?>" >
-	                    <?php the_post_thumbnail('mini', true); ?>
-                    </a>
-                </li>
 				<?php endwhile; ?>
-				</ul>
-				<?php while ( have_posts() ) : the_post(); ?>
-                <article id="article-<?php the_ID(); ?>">
-                    <h1><?php the_title(); ?></h1>
-                    <?php the_excerpt(); ?>
-                </article>
-				<?php endwhile; ?>
-                </div>
+                </div>            
+
 			<?php 
             endif;
             wp_reset_query();   
