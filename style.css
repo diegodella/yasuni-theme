@@ -249,7 +249,7 @@ article {
 #access {
     position: absolute;
     width: 100%;
-    background: #333;
+    background: #2E5300;
     left: 0;
     text-align: center;
     padding: 10px 0;
@@ -319,7 +319,7 @@ article {
 #colophon {
     position: absolute;
     width: 100%;
-    background: #333;
+    background: #2E5300;
     left: 0;
     text-align: center;
     padding: 5px 0;
@@ -346,15 +346,21 @@ article {
 #sponsors li {
     display:inline;
 }
+#sponsors li [alt=Quipux] {
+    margin: 0px 20px 0 0px;
+    }
+#sponsors li [alt=Sigob] {
+    margin: 0px 20px 0 0px;
+    }
 #contact-info {
     clear:both;
     text-align: center;
     margin: 2em -20px;
     background: #FFF;
     padding: 2em;
-    border-top: 5px solid #333;
+    border-top: 5px solid #2E5300;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 15px #111;
+    box-shadow: 0 8px 15px #222;
 }
 #contact-info p {
     color: #333;
@@ -374,7 +380,7 @@ article {
 	width: 103px;
 	height: 41px;
 	margin-top: 344px;
-	margin-left: 340px;
+	margin-left: 334px;
 	position:absolute;
 	z-index:10;
 }
@@ -385,36 +391,40 @@ article {
     right: 5px;
     top:-6px;
     background: white;
-    padding: 7px 5px 5px;
+    padding:0;
     border-radius: 0 0 5px 5px;
-    width: 32px;
-    text-align:left;
-    height:20px;
+    width: 65px;
+    text-align: left;
+    height: 25px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 } 
 #lang_sel:hover {
-    height:54px;
+    height:75px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
 }
 #lang_sel li ul{
-    display:none;
     opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
 }
 #lang_sel li:hover ul {
-    display:block;
     opacity: 1;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    transition: opacity 1s;
 }
-
+#lang_sel ul li a {
+    display:block;
+    margin: 6px;
+}
+.iclflag {
+ 	margin: 0;
+}
 #text-3, #text-4 {
     border: 2px solid #CCC;
     box-shadow: inset 0 0 5px #FFF, 1px 2px 7px #999;
@@ -612,9 +622,10 @@ article {
     
 }
 #contributions {
-    width: 320px;
-    height: 254px;
-    }
+	width: 320px;
+	height: 210px;
+	padding: 13px 0;
+}
 /*Button*/
 a.call {
     float:right;
@@ -681,10 +692,4 @@ a.call:active {
 }
 #content-slideshow .slideshow-nav li a {
        width: 252px !important;
-}
-
-#secondary .tubepress_thumb{
-    text-align:center;
-    margin: 0 auto;
-    width: 320px;
 }
