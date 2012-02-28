@@ -327,7 +327,6 @@ article {
 #sponsors {
     float:left;
     width:100%;
-    text-align:center;
 }
 #sponsors li {
     display:inline;
@@ -338,9 +337,6 @@ article {
     margin: 2em -20px;
     background: #FFF;
     padding: 2em;
-    border-top: 15px solid #333;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 7px 10px #111
 }
 #contact-info p {
     color: #333;
@@ -359,8 +355,10 @@ article {
 	background: url("images/logo-certificate.png") no-repeat;
 	width: 103px;
 	height: 41px;
-	margin-left: 1045px;
-	margin-top: -30px;
+	margin-top: 344px;
+	margin-left: 340px;
+	position:absolute;
+	z-index:10;
 }
 /*Language selector*/
 #lang_sel {
@@ -371,9 +369,9 @@ article {
     background: white;
     padding: 7px 5px 5px;
     border-radius: 0 0 5px 5px;
-    width: 52px;
+    width: 32px;
     text-align:left;
-    height:18px;
+    height:20px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -390,16 +388,16 @@ article {
 #lang_sel li ul{
     display:none;
     opacity: 0;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 #lang_sel li:hover ul {
     display:block;
     opacity: 1;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 #text-3, #text-4 {
@@ -662,7 +660,6 @@ a.call:active {
     -o-box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee;
     box-shadow: inset 0 0 4px 2px #abbccf, 0 0 1px 0 #eeeeee; 
 }
-
 #content-slideshow {
     margin: 0 0 1em;
 }
